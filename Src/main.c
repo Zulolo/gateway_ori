@@ -49,7 +49,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
-#include "mbedtls.h"
+#include "lwip.h"
 
 /* USER CODE BEGIN Includes */
 #include "gateway.h"
@@ -407,7 +407,6 @@ static void MX_GPIO_Init(void)
 {
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
@@ -423,11 +422,8 @@ static void MX_GPIO_Init(void)
 /* StartDefaultTask function */
 void StartDefaultTask(void const * argument)
 {
-  /* MX_LWIP_Init() is generated within mbedtls_net_init() function in net_cockets.c file */
-  /* Up to user to call mbedtls_net_init() function in MBEDTLS initialization step */
-
-  /* Up to user define the empty MX_MBEDTLS_Init() function located in mbedtls.c file */
-  MX_MBEDTLS_Init();
+  /* init code for LWIP */
+  MX_LWIP_Init();
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
