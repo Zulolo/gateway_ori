@@ -1,1 +1,1 @@
-# gateway_ori
+# MODBUS TCP <-> RTU Gateway
