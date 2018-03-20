@@ -52,7 +52,7 @@
 #ifndef __LWIPOPTS__H__
 #define __LWIPOPTS__H__
 
-#include "stm32f4xx_hal.h"
+#include "stm32f7xx_hal.h"
 
 /*-----------------------------------------------------------------------------*/
 /* Current version of LwIP supported by CubeMx: 2.0.3 -*/
@@ -73,8 +73,8 @@
 #define WITH_RTOS 1
 /*----- WITH_MBEDTLS enabled (Since MBEDTLS and FREERTOS are set) -----*/
 #define WITH_MBEDTLS 1
-/*----- CHECKSUM_BY_HARDWARE enabled -----*/
-#define CHECKSUM_BY_HARDWARE 1
+/*----- CHECKSUM_BY_HARDWARE disabled -----*/
+#define CHECKSUM_BY_HARDWARE 0
 /*-----------------------------------------------------------------------------*/
 
 /* LwIP Stack Parameters (modified compared to initialization value in opt.h) -*/
@@ -127,12 +127,8 @@
 #define LWIP_HTTPD 1
 /*----- Default Value for LWIP_HTTPD_CGI_SSI: 0 ---*/
 #define LWIP_HTTPD_CGI_SSI 1
-/*----- Default Value for LWIP_SNTP: 0 ---*/
-#define LWIP_SNTP 1
-/*----- Default Value for LWIP_STATS: 0 ---*/
-#define LWIP_STATS 1
-/*----- Value in opt.h for MIB2_STATS: 0 or SNMP_LWIP_MIB2 -----*/
-#define MIB2_STATS 0
+/*----- Value in opt.h for LWIP_STATS: 1 -----*/
+#define LWIP_STATS 0
 /*----- Value in opt.h for CHECKSUM_GEN_IP: 1 -----*/
 #define CHECKSUM_GEN_IP 0
 /*----- Value in opt.h for CHECKSUM_GEN_UDP: 1 -----*/
@@ -153,14 +149,10 @@
 #define CHECKSUM_CHECK_ICMP 0
 /*----- Value in opt.h for CHECKSUM_CHECK_ICMP6: 1 -----*/
 #define CHECKSUM_CHECK_ICMP6 0
+/*----- Default Value for UDP_DEBUG: LWIP_DBG_OFF ---*/
+#define UDP_DEBUG LWIP_DBG_ON
 /*----- Default Value for DHCP_DEBUG: LWIP_DBG_OFF ---*/
 #define DHCP_DEBUG LWIP_DBG_ON
-/*----- Default Value for HTTPD_DEBUG: LWIP_DBG_OFF ---*/
-#define HTTPD_DEBUG LWIP_DBG_ON
-/*----- Default Value for HTTPD_DEBUG_TIMING: LWIP_DBG_OFF ---*/
-#define HTTPD_DEBUG_TIMING LWIP_DBG_ON
-/*----- Default Value for SNTP_DEBUG: LWIP_DBG_OFF ---*/
-#define SNTP_DEBUG LWIP_DBG_ON
 /*-----------------------------------------------------------------------------*/
 /* USER CODE BEGIN 1 */
 

@@ -1,5 +1,5 @@
 
-#include "stm32f4xx_hal.h"
+#include "stm32f7xx_hal.h"
 #include "cmsis_os.h"
 
 void start_modbus_slave(void const * argument)

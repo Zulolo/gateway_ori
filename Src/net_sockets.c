@@ -75,7 +75,7 @@
 #include "netif/ethernet.h"
 
 #include "ethernetif.h"
-#include "stm32f4xx_hal.h"
+#include "stm32f7xx_hal.h"
 
 #include "main.h"
 /* Within 'USER CODE' section, code will be kept by default at each generation */

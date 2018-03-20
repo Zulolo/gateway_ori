@@ -58,7 +58,6 @@
 #include "mbedtls_config.h"
 
 /* USER CODE BEGIN 0 */
-#include "net_sockets.h"
 /* USER CODE END 0 */
 
 /* Global variables ---------------------------------------------------------*/
